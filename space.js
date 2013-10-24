@@ -1,18 +1,8 @@
 
 
 /**
- * SPACE JS by Toan Nguyen
- *
- * Space JS provides a space theme with "warp" effect, which replaces the usual loading icon.
- *
- ** Make sure you add the following lines into your html
- *
-   <div id="space">
-		<div class="space-content">
-			<!-- Your content goes here. -->
-		</div>
-	</div>
- *
+ * SPACE JS 
+ * by Toan Nguyen
  */
 
 
@@ -59,7 +49,7 @@
 				['left','right','top','bottom'].forEach(function(elem){
 					$space.find(".space__"+elem).addClass("jump-"+elem);
 				});
-               	$space.animate({"-webkit-perspective":"3"}, 1000, "linear");
+               	$space.css("-webkit-perspective","3");
 				$spaceContent.css("-webkit-transform","translateZ(90px)").delay(1000).queue(function(n){
 					$(this).css({
 						"-webkit-transform":"translateZ(-90px)",
@@ -74,8 +64,9 @@
 					$space.find(".space__"+elem).removeClass("jump-"+elem);
 				});
 				$spaceContent.fadeIn(200);
-            	$space.animate({"-webkit-perspective":"10000"}, 1000, "linear", function(){
+            	$space.css("-webkit-perspective","10000").delay(1000).queue(function(n){
             		$spaceContent.css("-webkit-transform","translateZ(0px)");
+            		n();
             	});
             }
 

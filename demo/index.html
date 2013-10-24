@@ -11,11 +11,15 @@
 	<script type="text/javascript" src="space.js"></script>
 </head>
 <body>
+	<a id="github" href="https://github.com/ToanNG/spacejs">
+		<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub">
+	</a>
+
 	<div id="space">
 		<div class="space-content">
 			<div class="astronaut"></div>
 			<h1>SPACE JS</h1>
-			<p>Star Trek fan? SpaceJS provides a space theme and replaces the boring loading icon with the "warp" effect.</p>
+			<p style="text-align: center;">Star Trek fan? Space JS provides a space theme with "warp" effect, which replaces the usual boring loading icon.</p>
 			<p>
 				<div class="button">
 					Try it!
@@ -32,14 +36,30 @@
 			mySpace.jump();
 			setTimeout(function(){
 				mySpace.stop();
-                $(".space-content").html("<div>"+
-                		"<h3>APIs</h3>"+
+                $(".space-content").html(
+                		"<h2>Usage</h2>"+
+
+                		"<p>Add the following lines into your HTML:</p>"+
+
                 		"<div class='highlight'>"+
-                			"$.space().init(content-width,content-height); <br>"+
-                			"$.space().jump(); <br>"+
-                			"$.space().stop(); <br>"+
+                			"&lt;<span class='red'>div</span> <span class='green'>id</span>=<span class='yellow'>\"space\"</span>&gt; <br>"+
+                			"&nbsp;&nbsp;&lt;<span class='red'>div</span> <span class='green'>class</span>=<span class='yellow'>\"space-content\"</span>&gt; <br>"+
+                			"&nbsp;&nbsp;&nbsp;&nbsp;<span class='gray'>&lt;!-- Your content goes here. --&gt;</span> <br>"+
+                			"&nbsp;&nbsp;&lt;/<span class='red'>div</span>&gt; <br>"+
+                			"&lt;/<span class='red'>div</span>&gt;"+
                 		"</div>"+
-                	"</div>");
+
+                		"<p>APIs:</p>"+
+
+                		"<div class='highlight'>"+
+                			"<span class='gray'>// initialize the script</span> <br>"+
+                			"<span class='red'>$</span>.space().init(content-width,content-height); <br><br>"+
+                			"<span class='gray'>// show \"warp\" effect</span> <br>"+
+                			"<span class='red'>$</span>.space().jump(); <br><br>"+
+                			"<span class='gray'>// stop \"warp\" effect</span> <br>"+
+                			"<span class='red'>$</span>.space().stop();"+
+                		"</div>"
+                	);
             }, 5000);
 		});
 	</script>

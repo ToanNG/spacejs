@@ -11,6 +11,13 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+#github {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	z-index: 9999;
+}
+
 
 /*------------------------------------*\
     $HOME
@@ -75,10 +82,36 @@ body {
     $USAGE
 \*------------------------------------*/
 
+.space-content h2 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+}
+
+.space-content p {
+	text-align: left;
+}
+
 .highlight {
-	padding: 10px 15px;
+	margin: 1em 0px;
+	padding: 15px 20px;
 	font-family: "Courier New", Courier, monospace;
 	text-align: left;
 	border: dashed thin gray;
+	border-radius: 10px;
 }
 
+.red {
+	color: #f92772;
+}
+
+.yellow {
+	color: #e6db74;
+}
+
+.green {
+	color: #a6e22d;
+}
+
+.gray {
+	color: #716d5c;
+}
