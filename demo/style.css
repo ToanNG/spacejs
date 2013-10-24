@@ -1,0 +1,84 @@
+
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+/*------------------------------------*\
+    $HOME
+\*------------------------------------*/
+
+.space-content {
+	color: white;
+	font-size: 16px;
+	font-weight: 300;
+	text-align: center;
+}
+
+.space-content .astronaut {
+	position: absolute;
+	top: 150px;
+	left: 150px;
+	width: 200px;
+	height: 200px;
+	z-index: 2;
+	background-image: url('http://nasaprospect.com/img/character_astronaut_drift.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 200px 200px;
+
+	-webkit-animation: float 100s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-timing-function: linear;
+
+	-webkit-transform-origin: 100px 450px;
+	-webkit-transform: translateY(-350px) rotate(0deg);
+}
+
+@-webkit-keyframes float
+{
+	0% {
+		-webkit-transform: translateY(-350px) rotate(0deg);
+	}
+	100% {
+		-webkit-transform: translateY(-350px) rotate(360deg);
+	}
+}
+
+.space-content h1 {
+	font-size: 66px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+}
+
+.space-content .button {
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	margin: 66px auto;
+	border: solid thin white;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+
+/*------------------------------------*\
+    $USAGE
+\*------------------------------------*/
+
+.highlight {
+	padding: 10px 15px;
+	font-family: "Courier New", Courier, monospace;
+	text-align: left;
+	border: dashed thin gray;
+}
+

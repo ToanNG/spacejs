@@ -1,0 +1,162 @@
+
+
+/**
+ * SPACE JS by Toan Nguyen
+ *
+ * Space JS provides a space theme with "warp" effect, which replaces the usual loading icon.
+ *
+ ** Make sure you add the following lines into your html
+ *
+   <div id="space">
+		<div class="space-content">
+			<!-- Your content goes here. -->
+		</div>
+	</div>
+ *
+ */
+
+
+/*------------------------------------*\
+    $SPACEJS
+\*------------------------------------*/
+
+#space {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-color: #1b1b1b;
+	-webkit-perspective: 10000;
+}
+
+.space-wrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.space {
+	position: absolute;
+	background-color: transparent;
+	background-image: url('http://www.distancetomars.com/images/stars_v02.png');
+	background-size: cover;
+}
+	.space__left {
+		left: 0px;
+		background-repeat: repeat-x;
+		-webkit-transform: rotateY(90deg);
+		-webkit-transform-origin: 0% 0% 0px;
+	}
+	.space__right {
+		right: 0px;
+		background-repeat: repeat-x;
+		-webkit-transform: rotateY(-90deg);
+		-webkit-transform-origin: 100% 0% 0px;
+	}
+	.space__top {
+		top: 0px;
+		background-repeat: repeat-y;
+		-webkit-transform: rotateX(-90deg);
+		-webkit-transform-origin: 0% 0% 0px;
+	}
+	.space__bottom {
+		bottom: 0px;
+		background-repeat: repeat-y;
+		-webkit-transform: rotateX(90deg);
+		-webkit-transform-origin: 0% 100% 0px;
+	}
+	.space__back {
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		-webkit-transform: translateZ(-90px);
+	}
+
+
+/*------------------------------------*\
+    $ANIMATION
+\*------------------------------------*/
+
+.jump-left {
+	-webkit-animation: jump-left 20s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-timing-function: linear;
+}
+
+.jump-right {
+	-webkit-animation: jump-right 20s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-timing-function: linear;
+}
+
+.jump-top {
+	-webkit-animation: jump-top 20s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-timing-function: linear;
+}
+
+.jump-bottom {
+	-webkit-animation: jump-bottom 20s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes jump-left
+{
+	0% {
+		background-position-x: 0px;
+	}
+	100% {
+		background-position-x: -1000px;
+	}
+}
+
+@-webkit-keyframes jump-right
+{
+	0% {
+		background-position-x: 0px;
+	}
+	100% {
+		background-position-x: 1000px;
+	}
+}
+
+@-webkit-keyframes jump-top
+{
+	0% {
+		background-position-y: 0px;
+	}
+	100% {
+		background-position-y: -1000px;
+	}
+}
+
+@-webkit-keyframes jump-bottom
+{
+	0% {
+		background-position-y: 0px;
+	}
+	100% {
+		background-position-y: 1000px;
+	}
+}
+
+
+/*------------------------------------*\
+    $CONTENT
+\*------------------------------------*/
+
+.space-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+}
+
