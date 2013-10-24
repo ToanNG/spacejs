@@ -6,7 +6,7 @@ Space JS
 * jQuery is required.
 
 ### Usage ###
-Make sure you add the following lines into your html:
+Make sure you add the following lines into your HTML:
 ```html
 <div id="space">
   <div class="space-content">
