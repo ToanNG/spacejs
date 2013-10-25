@@ -4,6 +4,7 @@ Space JS
 ### Introduction ###
 * Space JS provides a space theme with "warp" effect, which replaces the usual boring loading icon.
 * jQuery is required.
+* Demo: http://spacejs.ap01.aws.af.cm/
 
 ### Usage ###
 Make sure you add the following lines into your HTML:
